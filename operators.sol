@@ -30,19 +30,22 @@ contract operators{
 
 }
 
-contract increment{
+contract incrementOperator{
     //Increment operators
-    uint public a2;
-    uint public b2;
+    uint public a;
 
-    function setA2(uint8 _a2)public{
-        a2 = _a2;
-        ++a2;
+
+    function setA(uint8 _a)public{
+        a = _a;
+
     }
 
-    function setB2(uint8 _b2)public{
-        b2 = _b2;
-        --b2;
+    function increment() public{
+        a = ++a;
+    }
+
+    function decrement() public{
+        a = --a;
     }
 
 }
